@@ -28,4 +28,6 @@ class HH_api(Api):
         return all_vac
 
 
-    def hh_save_
+    def hh_save_file(self):
+        with open('save_file/hh.ru.json', 'w', encoding='utf=8') as file:
+            file.write(json.dumps(HH_api.get_api(self)))
