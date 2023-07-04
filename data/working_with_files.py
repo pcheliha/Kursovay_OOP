@@ -17,3 +17,12 @@ class Working_with_files:
             return json.load(file)
 
 
+    @staticmethod
+    def add_vac(file_name, data):
+        '''
+        метод для записи файла. принимает путь и имя для файла
+
+        '''
+
+        with open(file_name, 'w', encoding='utf-8') as file:
+            file.write(json.dumps(data))
