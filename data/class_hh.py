@@ -28,4 +28,5 @@ class HH_api(Api, Working_with_files):
             if i['salary']['from'] is None:
                 i['salary']['form'] = 0
 
-
+        all_vac.sort(key=lambda x: x['salary']['from'], reverse=True)
+        return all_vac
