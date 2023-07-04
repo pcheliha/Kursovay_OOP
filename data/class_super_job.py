@@ -16,7 +16,16 @@ class Super_job(Api, Working_with_files):
                             '.fee01ee4ea3b163caf63d8a8f6ca0d648e790ea9'}
 
     def get_api(self):
-
+        """
+        метод для получения данных
+        :return: отсортированный по ЗП список.
+        """
+        data = requests.get("https://api.superjob.ru/2.0/vacancies/", headers=self.headers, params=self.par).json()
+        all_vac = []
+        for i in data['objects']:
+            all_vac.append(i)
+        all_vac.sort(key=lambda x: x['payment_from'], reverse=True)
+        return all_vac
 
 
 
