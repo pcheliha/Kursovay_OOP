@@ -24,5 +24,4 @@ class Working_with_files:
 
         '''
 
-        with open(file_name, 'w', encoding='utf-8') as file:
-            file.write(json.dumps(data))
+
