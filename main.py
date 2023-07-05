@@ -6,8 +6,8 @@ from data.class_super_job import Super_job
 from data.working_with_files import Working_with_files
 
 def main():
-    user_input_1 = input('Доброго времени суток!\n'
-                         'Перед началом работы, рекомендуется очистить файл "all_vacancy.csv"\n'
+    user_input_1 = input('Здраствуйте!\n'
+                         'Перед тем как начть, рекомендуется очистить файл "all_vacancy.csv"\n'
                          'Для очистки введите "yes": ')
 
     if user_input_1 == 'yes':
@@ -60,7 +60,7 @@ def main():
                     print(("конец программы"))
                     sys.exit()
                 else:
-                    print('Введите нужный вариант Введите нужный вариант')
+                    print('Введите нужный вариант')
         else:
             print('Введите нужный вариант')
 
